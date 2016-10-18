@@ -1,0 +1,44 @@
+main, aside {
+	@include box();
+
+}
+
+main {
+	@include span(8);
+}
+
+aside {
+	@include span(4 last);
+}
+
+@include susy-breakpoint($large){
+	body{
+		background: $large-bg;
+	}//body
+}//large breakpoint
+
+@include susy-breakpoint($medium){
+	body{
+		background: $medium-bg;
+main {
+	@include span(6);
+}
+
+aside {
+	@include span(6 last);
+}
+	}//body
+}//medium breakpoint
+
+@include susy-breakpoint($small){
+	body{
+		background: $small-bg;
+main {
+	@include span(12);
+}
+
+aside {
+	@include span(12 last);
+}
+	}//body
+}//small breakpoint
